@@ -107,7 +107,7 @@ npm run scene-map -- --name "<맵 이름>" --prompt-file <프롬프트 파일> -
 새 프로젝트에 이 킷을 깔려면:
 
 ```bash
-git clone --depth 1 https://github.com/GojoSuperman/spum-kit.git /tmp/spum-kit \
+rm -rf /tmp/spum-kit && git clone --depth 1 https://github.com/GojoSuperman/spum-kit.git /tmp/spum-kit \
   && bash /tmp/spum-kit/install.sh
 ```
 

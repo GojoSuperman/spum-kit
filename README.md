@@ -19,7 +19,7 @@
 새 프로젝트 폴더에서:
 
 ```bash
-git clone --depth 1 https://github.com/GojoSuperman/spum-kit.git /tmp/spum-kit \
+rm -rf /tmp/spum-kit && git clone --depth 1 https://github.com/GojoSuperman/spum-kit.git /tmp/spum-kit \
   && bash /tmp/spum-kit/install.sh
 ```
 

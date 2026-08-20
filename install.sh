@@ -3,7 +3,7 @@
 # SPUM 맵 킷을 현재 폴더에 설치한다 — 새 프로젝트에서 "맵 만들어줘" 가 바로 되게.
 #
 # 쓰는 법 (새 폴더에서):
-#   git clone --depth 1 https://github.com/GojoSuperman/spum-kit.git /tmp/spum-kit \
+#   rm -rf /tmp/spum-kit && git clone --depth 1 https://github.com/GojoSuperman/spum-kit.git /tmp/spum-kit \
 #     && bash /tmp/spum-kit/install.sh
 #
 # 설치되는 것:
