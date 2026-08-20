@@ -8,7 +8,7 @@
 #
 # 설치되는 것:
 #   .claude/skills/spum-map/   스킬 (Claude Code 가 "맵 만들어줘" 에 반응하게 하는 것)
-#   scripts/ (6) · src/ (7)    파이프라인
+#   scripts/ (7) · src/ (7)    파이프라인
 #   package.json               scene-map / studio-login / studio-open / studio-pull / studio-apply
 #   .gitignore                 out/ 등
 #
@@ -36,13 +36,13 @@ echo "  ✓ 스킬        .claude/skills/spum-map/"
 # ★ src 목록은 import 그래프가 닫히도록 유지한다 (2026-08-21: auto-connect →
 #   roles, image-io 가 빠져 설치본이 깨졌던 것을 고침).
 mkdir -p "$DEST/scripts" "$DEST/src"
-for f in make-scene-map scene-to-map studio-login studio-open studio-pull studio-apply; do
+for f in make-scene-map scene-to-map studio-login studio-open studio-pull studio-apply fix-water-mask; do
   cp "$SRC/scripts/$f.mjs" "$DEST/scripts/"
 done
 for f in studio-browser studio-scene studio-backup png image-io auto-connect roles; do
   cp "$SRC/src/$f.mjs" "$DEST/src/"
 done
-echo "  ✓ 스크립트    scripts/ (6) · src/ (7)"
+echo "  ✓ 스크립트    scripts/ (7) · src/ (7)"
 
 # ── 3. 참고 문서 ───────────────────────────────────────────
 mkdir -p "$DEST/docs"

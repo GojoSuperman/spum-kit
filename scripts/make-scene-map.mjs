@@ -193,8 +193,8 @@ await withStudio({ headless: !headed, ...(record ? { recordDir: 'out/videos' } :
   console.log(`  saveServerSnapshot → ${applied.saved}`);
 
   step(6, '새로고침하고 확인');
-  await page.goto(`${STUDIO_ORIGIN}/studio/?section=map`, { waitUntil: 'domcontentloaded', timeout: 60000 });
-  await page.waitForTimeout(7000);
+  await enterStudio(page, { section: 'map' });
+  await page.waitForTimeout(3000);
   await page.locator(`text=${mapName}`).first().click({ timeout: 8000 }).catch(() => {});
   await page.waitForTimeout(4000);
   for (const [x, y] of [[1018, 511], [1018, 537]]) { await page.mouse.click(x, y); await page.waitForTimeout(800); }

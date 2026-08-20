@@ -23,7 +23,7 @@ rm -rf /tmp/spum-kit && git clone --depth 1 https://github.com/GojoSuperman/spum
   && bash /tmp/spum-kit/install.sh
 ```
 
-스킬(`.claude/skills/spum-map/`) · 파이프라인(scripts 6 + src 7) · npm scripts ·
+스킬(`.claude/skills/spum-map/`) · 파이프라인(scripts 7 + src 7) · npm scripts ·
 `.gitignore` 가 놓이고 의존성(playwright 포함)까지 깔린다.
 
 요구 환경: Node 22+, [Claude Code](https://claude.com/claude-code), SPUM 계정.
@@ -92,7 +92,7 @@ npm run scene-map -- --name "<맵 이름>" --prompt-file <파일> --headed --rec
 
 ```
 .claude/skills/spum-map/   스킬 — "맵 만들어줘" 의 진입점
-scripts/                   make-scene-map · scene-to-map · studio-login/open/pull/apply
+scripts/                   make-scene-map · scene-to-map · fix-water-mask · studio-login/open/pull/apply
 src/                       studio-browser · studio-scene · studio-backup · png · image-io · auto-connect · roles
 prompts/                   검증된 예시 프롬프트
 docs/                      Studio 를 두 곳에서 쓰기

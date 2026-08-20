@@ -77,6 +77,12 @@ export function findProfileHolders() {
 
 export async function openStudioContext(opts = {}) {
   const { headless = true, allowShared = false, recordDir = null } = opts;
+  if (!headless) {
+    // 한글 입력: 창을 띄울 땐 fcitx IME 환경을 기본으로 붙인다 (셸 프로필이 안 읽힌 채 실행돼도 되도록)
+    process.env.GTK_IM_MODULE ??= 'fcitx';
+    process.env.QT_IM_MODULE ??= 'fcitx';
+    process.env.XMODIFIERS ??= '@im=fcitx';
+  }
   if (!allowShared) {
     const holders = findProfileHolders();
     if (holders.length) {
@@ -328,5 +334,17 @@ export async function enterStudio(page, { section = '' } = {}) {
     await dismissTour(page);
   }
   if (tour) console.log(`[guard] 투어 오버레이 ${tour}개 제거`);
+  // ?section= 이 무시되고 Dashboard(FIRST GUIDE)에 머무는 경우가 있다 (v1.5.0 실측, 2026-08-20).
+  // 원하는 섹션의 좌측 네비 버튼이 활성이 아니면 직접 눌러 이동한다.
+  if (section) {
+    try {
+      const btn = page.locator(`button[data-nav="${section}"]`).first();
+      if (await btn.count() && !/\bis-active\b/.test((await btn.getAttribute('class')) || '')) {
+        await btn.click();
+        await page.waitForTimeout(3000);
+        console.log(`[guard] section=${section} 이 URL 로 적용되지 않아 네비 버튼으로 이동했습니다.`);
+      }
+    } catch { /* 네비 구조가 다르면 기존 동작 유지 */ }
+  }
   return { session: s, guard };
 }
