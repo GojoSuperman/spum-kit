@@ -98,3 +98,7 @@ prompts/                   검증된 예시 프롬프트
 docs/                      Studio 를 두 곳에서 쓰기
 install.sh                 새 프로젝트에 킷 심기
 ```
+
+## 라이선스
+
+MIT — [LICENSE](LICENSE)
