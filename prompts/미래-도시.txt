@@ -1,0 +1,7 @@
+Top-down orthographic futuristic sci-fi city district, one continuous scene, game map art.
+Monorail station with platform and rails along the top edge.
+Central plaza with a glowing holographic fountain in the middle.
+Shop street with neon signed storefronts and vendor stalls on the left.
+Glass dome sky garden with trees and walkways bottom right.
+Clean metal deck ground, bright even lighting, cool palette with cyan accents.
+No text, no people, no UI. Square, aligned to a 32x32 grid.

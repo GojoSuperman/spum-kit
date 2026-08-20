@@ -1,0 +1,7 @@
+Top-down orthographic medieval castle lord's quarters, one continuous scene, game map art.
+Library top left with bookshelves and a reading desk.
+Bedchamber top right with a canopy bed and a chest.
+Central horizontal corridor with a red carpet linking all rooms.
+Chapel bottom left with an altar and pews, study bottom right with a writing desk.
+Pale stone floor, tall bright windows, warm daylight, tapestries.
+No text, no people, no UI. Square, aligned to a 32x32 grid.

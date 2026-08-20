@@ -1,0 +1,6 @@
+Top-down orthographic fantasy market square, one continuous scene, game map art.
+Stone fountain with benches at the center of an open plaza.
+Strange fruit stalls top left, a bread stand with baskets top right.
+Cloth and lantern stalls bottom left, pottery and flower stands bottom right.
+Cobblestone ground, striped teal and violet awnings, hanging lanterns, warm daylight.
+No text, no people, no UI. Square, aligned to a 32x32 grid.

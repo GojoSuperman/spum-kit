@@ -1,0 +1,7 @@
+Top-down orthographic Japanese tatami house interior, one continuous scene, game map art.
+Kitchen top left with a wooden counter and a clay stove.
+Sleeping area top right with a futon and a paper window.
+Central living room with a sunken irori hearth, a low table and cushions.
+Reading nook bottom left with a bookshelf and zabuton, wooden bath tub bottom right.
+Pale tatami mats, shoji screens, warm daylight.
+No text, no people, no UI. Square, aligned to a 32x32 grid.

@@ -1,0 +1,7 @@
+Top-down orthographic 1960s Korean hillside shantytown village, one continuous scene, game map art.
+Steep concrete stair alley from bottom center to top, narrow branching alleys.
+Slate and tin roofed houses in tight rows upper left and upper right, low cement walls.
+Tiny corner store middle right, communal well middle left.
+Dirt plaza bottom left with a wooden bench and a tree.
+Bright sunny daylight, warm palette.
+No text, no people, no UI. Square, aligned to a 32x32 grid.

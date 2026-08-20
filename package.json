@@ -1,0 +1,20 @@
+{
+  "name": "spum-kit",
+  "private": true,
+  "type": "module",
+  "description": "SPUM Studio 를 코드로 몰아 AI 조감도 한 장을 게임 맵으로 만드는 Claude Code 킷",
+  "scripts": {
+    "scene-map": "node scripts/make-scene-map.mjs",
+    "scene-to-map": "node scripts/scene-to-map.mjs",
+    "studio-login": "node scripts/studio-login.mjs",
+    "studio-open": "node scripts/studio-open.mjs",
+    "studio-pull": "node scripts/studio-pull.mjs",
+    "studio-apply": "node scripts/studio-apply.mjs"
+  },
+  "dependencies": {
+    "jpeg-js": "^0.4.4"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  }
+}
