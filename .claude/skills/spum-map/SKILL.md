@@ -99,7 +99,7 @@ npm run scene-map -- --name "<맵 이름>" --prompt-file <프롬프트 파일> -
 - `npm i && npx playwright install chromium` + 시스템 라이브러리(`install-deps`)
 - `npm run studio-login` 으로 **한 번 로그인** (SSO 는 이메일 매직링크라 사람이 해야 한다).
   로그인 프로필은 홈 공용(`~/.spum-studio`)이라 **프로젝트마다 다시 하지 않아도 된다.**
-- 세션은 이후 자동 갱신된다
+- 세션은 로그인 후 약 30분에 서버가 끊는다 — 작업은 로그인 직후 몰아서 (4절)
 - 다른 브라우저나 다른 프로젝트에서 Studio 를 만졌다면 시작 전에 **`npm run studio-pull`** —
   동기화가 append-only 라 낡은 로컬로 열면 그게 최신 리비전이 된다
   (`docs/Studio 를 두 곳에서 쓰기.md`)
