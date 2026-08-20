@@ -1,6 +1,6 @@
 # spum-kit
 
-**SPUM Studio 를 코드로 몰아, AI 조감도 한 장을 게임 맵으로 만드는 Claude Code 킷.**
+**[SPUM Studio](https://spum.soonsoon.ai) 를 코드로 몰아, AI 조감도 한 장을 게임 맵으로 만드는 Claude Code 킷.**
 
 타일을 반복해 까는 방식과 달리, 씬 전체를 한 장으로 그려 32×32 격자로 잘라
 **1024칸을 각각 고유 타일로** 등록한다. 완성된 일러스트가 그대로 맵이 된다.
@@ -27,6 +27,7 @@ rm -rf /tmp/spum-kit && git clone --depth 1 https://github.com/GojoSuperman/spum
 `.gitignore` 가 놓이고 의존성(playwright 포함)까지 깔린다.
 
 요구 환경: Node 22+, [Claude Code](https://claude.com/claude-code), SPUM 계정.
+새 리눅스/WSL 이면 크롬 구동용 시스템 라이브러리도 한 번 깐다: `npx playwright install-deps`
 
 ## 로그인 — 계정당 한 번
 
@@ -52,8 +53,9 @@ npm run studio-login      # 창이 뜨면 이메일 매직링크를 누른다
 npm run scene-map -- --name "<맵 이름>" --prompt-file <파일> --headed --record --quality medium
 ```
 
-`prompts/` 에 검증된 예시 프롬프트가 들어 있다 (우주선 실내 · 중세 여관 · 산동네 마을 ·
-미래 도시 등). `--dry-run` 은 그림만 만들고 주입하지 않는다.
+`prompts/` 에 검증된 예시 프롬프트 5개가 들어 있다 (산동네 마을 · 미래 도시 · 판타지 시장 광장 ·
+다다미 집 · 성주의 거처). 우주선 실내·중세 여관 골격은 스킬의 `references/프롬프트 예시.md` 에 있다.
+`--dry-run` 은 그림만 만들고 주입하지 않는다.
 
 ### 결과 확인
 
@@ -76,7 +78,7 @@ npm run scene-map -- --name "<맵 이름>" --prompt-file <파일> --headed --rec
 | 다른 기기와 오갈 때 | 동기화가 append-only 라 낡은 로컬로 열면 낡은 게 최신이 된다 — 시작 전 `npm run studio-pull` ([문서](docs/Studio%20%EB%A5%BC%20%EB%91%90%20%EA%B3%B3%EC%97%90%EC%84%9C%20%EC%93%B0%EA%B8%B0.md)) |
 | `Classify` 는 누르지 않는다 | 분류기가 러그를 장애물로, 돌바닥을 blocked 로 붙인 사례 |
 | 밝은 씬일수록 좋다 | 마스크 정확도가 밝기에 비례한다. 야외 맵은 물·잔디 판정을 꼭 확인 |
-| 비용 | 씬 맵 하나 약 250쌤 (조감도 125 + 마스크 125). 저장소는 localStorage 약 5MB, 맵 하나 ~550KB |
+| 비용 | 씬 맵 하나 약 250쌤 — 쌤(SSAM)은 SPUM 계정의 AI 생성 크레딧이다 (조감도 125 + 마스크 125). 저장소는 localStorage 약 5MB, 맵 하나 ~550KB |
 
 ## 통행 판정이 하는 일
 
